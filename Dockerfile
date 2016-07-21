@@ -11,12 +11,9 @@ RUN pip install \
   h5py \
   keras
 
-RUN apt-get install -y \
-  python3-pip \
-  python3-numpy \
-  python3-scipy
+RUN curl https://bootstrap.pypa.io/get-pip.py | python3.4
 
-RUN pip3 install \
+RUN pip3 install numpy && pip3 install scipy && pip3 install \
   ipython \
   pyyaml \
   h5py \
