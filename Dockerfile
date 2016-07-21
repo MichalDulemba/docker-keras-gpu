@@ -3,6 +3,7 @@ FROM tensorflow/tensorflow:latest-devel-gpu
 ENV KERAS_BACKEND tensorflow
 
 RUN apt-get update && apt-get install -y \
+  libpython3-dev \
   libhdf5-dev
 
 RUN pip install \
